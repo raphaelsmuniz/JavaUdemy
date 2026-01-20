@@ -43,6 +43,7 @@ public class Program_exemplo2_secao09 {
 		System.out.println();
 		System.out.println(produto);
 		
+		System.out.println();
 		System.out.println(p);
 		
 		scan.close();
