@@ -2,7 +2,7 @@ package exemplo_encapsulamento;
 
 public class Product {
 
-	private String nome;
+	String nome;
 	private double preco;
 	private int quantidade;
 	
