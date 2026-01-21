@@ -6,11 +6,10 @@ public class Product {
 	private double preco;
 	private int quantidade;
 	
-	//criando um construtor padrão
 	public Product() {
 		
 	}
-	//exemplo de sobrecarga, chamando o mesmo construtor 2x, sendo que parâmetros diferentes.
+	
 	public Product(String nome, double preco, int quantidade) {
 		this.nome = nome;
 		this.preco = preco;
@@ -22,26 +21,28 @@ public class Product {
 		this.preco = preco;
 	}
 	
+	
+	
 	public String getNome() {
 		return nome;
 	}
-	
-	public double getPreco() {
-		return preco;
-	}
-	
-	public int getQuantidade() {
-		return quantidade;
-	}
-	
+
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	
+
+	public double getPreco() {
+		return preco;
+	}
+
 	public void setPreco(double preco) {
 		this.preco = preco;
 	}
-	
+
+	public int getQuantidade() {
+		return quantidade;
+	}
+
 	public double totalValueinStock() {
 		return (double) preco * quantidade;
 	}
@@ -52,7 +53,7 @@ public class Product {
 		this.quantidade -= quantidade;
 	}
 	public String toString() {
-		return "Dados do produto: " + nome
+		return "Dados do Produto: " + nome
 				+ ", R$ "
 				+ String.format("%.2f", preco)
 				+ ", "
