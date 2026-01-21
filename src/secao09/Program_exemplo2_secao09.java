@@ -44,7 +44,9 @@ public class Program_exemplo2_secao09 {
 		System.out.println(produto);
 		
 		System.out.println();
-		System.out.println(p);
+		System.out.println(p.nome);
+		System.out.println(p.preco);
+		System.out.println(p.quantidade);
 		
 		scan.close();
 
