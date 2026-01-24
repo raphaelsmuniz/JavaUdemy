@@ -22,10 +22,6 @@ public class ContaBancaria2 {
 		return this.valorConta = valorConta;
 	}
 
-	public void setValorConta(double valorConta) {
-		this.valorConta = valorConta;
-	}
-
 	public int getNumeroConta() {
 		return numeroConta;
 	}
@@ -45,7 +41,7 @@ public class ContaBancaria2 {
 	public String toString() {
 		return "Número da conta: " + numeroConta 
 				+ ", Nome do titular: " + nomeTitConta 
-				+ ", Valor da conta: " + String.format("%.2f%n", getValorConta(valorConta));
+				+ ", Valor da conta: R$ " + String.format("%.2f%n", getValorConta(valorConta));
 	}
 	
 	

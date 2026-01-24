@@ -9,6 +9,7 @@ public class Application {
 
 	public static void main(String[] args) {
 
+		//criado a declaração da variável ContaBancaria contaBancaria;
 		Locale.setDefault(Locale.US);
 		Scanner scan = new Scanner(System.in);
 		
@@ -16,32 +17,38 @@ public class Application {
 				
 		System.out.print("Informe o número da conta: ");
 		int numeroConta = scan.nextInt();
-		scan.nextLine();
 		System.out.print("Informe o nome do titular da conta: ");
+		//a quebra de linha fica aqui:
+		scan.nextLine();
 		String nome = scan.nextLine();
 		System.out.print("Haverá depósito inicial (y/n)? ");
-		String depositoInicial = scan.next();
+		char depositoInicial = scan.next().charAt(0); //trocado o tipo da variável para char
 		
-		ContaBancaria contaBancaria = new ContaBancaria(nome, numeroConta, depositoInicial, valorDeposito);
-					
+		ContaBancaria contaBancaria = new ContaBancaria(nome, numeroConta, valorDeposito);
+		
+		//foi utilizado a função IF na validação do depósito inicial. A forma em que foi feita, observar a correção do exercício.
 		switch(depositoInicial) {
-		case "y":
+		case 'y':
 			System.out.print("Informe o valor do depósito inicial: R$ ");
 			valorDeposito = scan.nextDouble();
 			contaBancaria.getValorDeposito(valorDeposito);
+			//foi instanciado o método com 3 parâmetros aqui...
+			//contaBancaria = new ContaBancaria(nome, numeroConta, valorDeposito); -> exercitando a sobrecarga.
 			System.out.println("Dados da conta:");
 			System.out.print(contaBancaria);
 			System.out.println();
 			break;
-		case "n":
+		case 'n':
 			contaBancaria.getValorDeposito(valorDeposito);
+			//foi instanciado o método com 2 parâmetros aqui...
+			//contaBancaria = new ContaBancaria(nome, numeroConta); -> exercitando a sobrecarga.
 			System.out.println("Dados da conta:");
 			System.out.print(contaBancaria);
 			System.out.println();
 			break;
 		default:
-			depositoInicial = "Valor inválido... Favor repetir o processo de cadastro da conta corrente.";
-			System.out.print(depositoInicial);
+			String message = "Valor inválido... Favor repetir o processo de cadastro da conta corrente.";
+			System.out.print(message);
 			break;
 		}
 		
