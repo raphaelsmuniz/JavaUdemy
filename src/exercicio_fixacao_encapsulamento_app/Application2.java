@@ -33,13 +33,13 @@ public class Application2 {
 			//conta.getValorConta(); 
 			
 			System.out.println();
-			System.out.print("Dados da conta:");
+			System.out.print("Dados da conta: ");
 			System.out.print(conta);
 			break;
 		}
 		case "n": {
 			System.out.println();
-			System.out.print("Dados da conta:");
+			System.out.print("Dados da conta: ");
 			System.out.print(conta);
 			break;
 		}
