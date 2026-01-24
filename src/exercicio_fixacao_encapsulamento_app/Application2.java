@@ -30,10 +30,11 @@ public class Application2 {
 		case "y": {
 			System.out.print("Informe o valor do depósito inicial: R$ ");
 			valorConta = scan.nextDouble();
-			//conta.getValorConta(); 
+			conta.getValorConta(valorConta); 
 			
 			System.out.println();
 			System.out.print("Dados da conta: ");
+			System.out.println();
 			System.out.print(conta);
 			break;
 		}
@@ -48,8 +49,23 @@ public class Application2 {
 			break;
 		}
 		
+		System.out.println();
 		System.out.print("Informe o valor para depósito: R$ ");
+		valorConta = scan.nextDouble();
+		conta.addDepositoConta(valorConta);
 		
+		System.out.print("Dados da conta: ");
+		System.out.println();
+		System.out.print(conta);
+		
+		System.out.println();
+		System.out.print("Informe o valor para saque: R$ ");
+		valorConta = scan.nextDouble();
+		conta.saqueConta(valorConta);
+		
+		System.out.print("Dados da conta: ");
+		System.out.println();
+		System.out.print(conta);
 		
 		scan.close();
 
