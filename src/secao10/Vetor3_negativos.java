@@ -9,19 +9,19 @@ public class Vetor3_negativos {
 		Scanner scan = new Scanner(System.in);
 		
 		System.out.print("Quantos números você vai digitar? ");
-		int numero = scan.nextInt();
+		int numero3 = scan.nextInt();
 		
-		int [] vetor = new int[numero];
+		int [] vetor3 = new int[numero3];
 		
-		for (int i=0 ; i<vetor.length ; i++) {
+		for (int i=0 ; i<vetor3.length ; i++) {
 			System.out.print("Digite um número: ");
-			vetor[i] = scan.nextInt();
+			vetor3[i] = scan.nextInt();
 		}
 		
 		System.out.println("Números negativos:");
-		for (int i=0 ; i<vetor.length ; i++) {
-			if (vetor[i] < 0) {
-				System.out.println(vetor[i]);
+		for (int i=0 ; i<vetor3.length ; i++) {
+			if (vetor3[i] < 0) {
+				System.out.println(vetor3[i]);
 			}
 		}
 		
