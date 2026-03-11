@@ -43,7 +43,7 @@ public class Vetor5_alturas {
 		System.out.println("");
 		System.out.printf("A altura média é: %.2f%n", alturaMedia);
 		
-		double porcentIdade = (idade / vetorIdade.length);
+		double porcentIdade = (idade * 100 / vetorIdade.length);
 		System.out.printf("As pessoas com menos de 16 anos são: %.1f%% %n", porcentIdade);
 		
 		for (int i = 0; i < vetorIdade.length; i++) {
